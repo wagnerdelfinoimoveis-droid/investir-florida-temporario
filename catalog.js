@@ -16,10 +16,13 @@ grid.innerHTML = window.PROPERTIES.map((property) => {
   const message = encodeURIComponent(`Olá, tenho interesse no imóvel MLS ${property.mls}.`);
   const specs = property.specs.map((spec) => `<li>${escapeHtml(spec)}</li>`).join('');
   const detailsUrl = `imovel.html?mls=${encodeURIComponent(property.mls)}`;
+  const image = property.image
+    ? `<img src="${escapeHtml(property.image)}" alt="Imagem do imóvel MLS ${escapeHtml(property.mls)}" loading="lazy">`
+    : `<span class="property-photo-placeholder">${escapeHtml(property.photoNote || 'Fotografias em atualização')}</span>`;
   return `
     <article class="property-card" data-category="${escapeHtml(property.category)}">
       <a class="property-image-link" href="${detailsUrl}" aria-label="Ver detalhes do imóvel MLS ${escapeHtml(property.mls)}">
-        <img src="${escapeHtml(property.image)}" alt="Imagem do imóvel MLS ${escapeHtml(property.mls)}" loading="lazy">
+        ${image}
       </a>
       <div class="property-content">
         <div class="property-topline"><span>${escapeHtml(property.status)}</span><small>MLS ${escapeHtml(property.mls)}</small></div>
