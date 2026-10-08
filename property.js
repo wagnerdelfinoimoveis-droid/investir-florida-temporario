@@ -13,9 +13,10 @@ if (!selectedProperty) {
   const details = selectedProperty.specs.length ? selectedProperty.specs.map((spec) => `<li>${safeText(spec)}</li>`).join('') : '<li>Detalhes adicionais sob consulta</li>';
   const images = selectedProperty.images || [];
   const galleryMarkup = images.length
-    ? `<div class="gallery-stage">
+      ? `<div class="gallery-stage">
         <button class="gallery-arrow gallery-prev" type="button" aria-label="Foto anterior">‹</button>
         <img id="gallery-main" src="${safeText(images[0])}" alt="Foto 1 do imóvel MLS ${safeText(selectedProperty.mls)}">
+        <img class="gallery-watermark" src="assets/asset-01.png" alt="" aria-hidden="true">
         <button class="gallery-arrow gallery-next" type="button" aria-label="Próxima foto">›</button>
       </div>
       <div class="gallery-meta"><span id="gallery-counter">1 de ${images.length}</span><span>MLS ${safeText(selectedProperty.mls)}</span></div>

@@ -14,7 +14,15 @@ window.PROPERTIES = [
   { mls: 'O6431425', category: 'comercial', status: 'Locação comercial', type: 'Imóvel comercial', address: '7901 Kingspointe Pkwy', location: 'Condado de Orange, Flórida', price: 9325, period: 'por mês', specs: ['Construído em 2005'], images: gallery('O6431425', 16) },
   { mls: 'O6424993', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '5383 Vista Lago Dr', location: 'Condado de Orange, Flórida', price: 419000, period: '', specs: ['4 quartos', '3 banheiros', '135,45 m² (1.458 sqft)', 'Construído em 2026'], images: gallery('O6424993', 37) },
   { mls: 'O6424750', category: 'locacao', status: 'Para locação', type: 'Imóvel residencial', address: '5341 Vista Lago Dr', location: 'Condado de Orange, Flórida', price: 2950, period: 'por mês', specs: ['4 quartos', '3 banheiros', '135,45 m² (1.458 sqft)', 'Construído em 2026'], images: gallery('O6424993', 37) },
-  { mls: 'O6422812', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '8192 Ludington Cir', location: 'Condado de Orange, Flórida', price: 2200000, period: '', specs: ['4 quartos', '400,51 m² (4.311 sqft)', 'Piscina privativa', 'Construído em 2018'], images: gallery('O6422812', 21) },
+  { mls: 'O6422812', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '8192 Ludington Cir', location: 'Condado de Orange, Flórida', price: 2200000, period: '', specs: ['6 dormitórios', '4 banheiros', '400,51 m² (4.311 sqft)', 'Piscina privativa', 'Garagem para 3 veículos', 'Construído em 2018'], images: [
+    ...gallery('O6422812', 18),
+    'assets/galleries/O6422812/O6422812_19.jpg',
+    'assets/galleries/O6422812/O6422812_20.jpg',
+    'assets/galleries/O6422812/O6422812_21.jpg',
+    'assets/galleries/O6422812/O6422812_22.jpg',
+    'assets/galleries/O6422812/O6422812_23.jpg',
+    'assets/galleries/O6422812/O6422812_24.jpg'
+  ] },
   { mls: 'O6422241', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '4642 River Gem Ave', location: 'Condado de Orange, Flórida', price: 798000, period: '', specs: ['5 quartos', '5 banheiros', '313,36 m² (3.373 sqft)', 'Piscina do condomínio', 'Construído em 2006'], images: gallery('O6422241', 52) },
   { mls: 'O6421698', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '11750 Chateaubriand Ave', location: 'Condado de Orange, Flórida', price: 1150000, period: '', specs: ['5 quartos', '6 banheiros', '305,84 m² (3.292 sqft)', 'Piscina privativa', 'Construído em 2012'], images: gallery('O6421698', 44) },
   { mls: 'O6417364', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '6466 Cava Alta Dr, unidade 2', location: 'Condado de Orange, Flórida', price: 194000, period: '', specs: ['3 quartos', '2 banheiros', '115,85 m² (1.247 sqft)', 'Piscina do condomínio', 'Construído em 2005'], images: galleryWithCover('O6417364', 25, 4) },
