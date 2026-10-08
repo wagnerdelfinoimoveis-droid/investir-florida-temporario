@@ -21,7 +21,7 @@ grid.innerHTML = window.PROPERTIES.map((property) => {
     : `<span class="property-photo-placeholder">${escapeHtml(property.photoNote || 'Fotografias em atualização')}</span>`;
   return `
     <article class="property-card" data-category="${escapeHtml(property.category)}">
-      <a class="property-image-link" href="${detailsUrl}" aria-label="Ver detalhes do imóvel MLS ${escapeHtml(property.mls)}">
+      <a class="property-image-link${property.image ? ' has-image' : ''}" href="${detailsUrl}" aria-label="Ver detalhes do imóvel MLS ${escapeHtml(property.mls)}">
         ${image}
       </a>
       <div class="property-content">
