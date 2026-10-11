@@ -14,6 +14,34 @@ const localGallery = (mls, count) => Array.from(
   (_, index) => `assets/galleries/${mls}/${mls}_${String(index + 1).padStart(2, '0')}.jpg`
 );
 
+const COORDS = {
+  O6432344: [28.51891, -81.48748],
+  O6417361: [28.51891, -81.48748],
+  O6431425: [28.46231, -81.43848],
+  O6424993: [28.53144, -81.44957],
+  O6424751: [28.5314, -81.44915],
+  O6424750: [28.53138, -81.449],
+  O6422812: [28.4093, -81.49202],
+  O6422241: [28.49621, -81.592],
+  O6421698: [28.43576, -81.55427],
+  O6417364: [28.5151, -81.4694],
+  O6417366: [28.50986, -81.49538],
+  O6415369: [28.5145, -81.46833],
+  O6409623: [28.47144, -81.26505],
+  O6406846: [28.52051, -81.47253],
+  O6403348: [28.52051, -81.47253],
+  O6403354: [27.27459, -82.43231],
+  O6388479: [28.54334, -81.30929],
+  O6387411: [28.6541, -81.52004],
+  O6383422: [28.54443, -81.59094],
+  O6369048: [27.95681, -82.74525],
+  O6353267: [28.73722, -81.3578],
+  O6326872: [28.51543, -81.46887],
+  O6305521: [28.34166, -81.47495],
+  O6291660: [28.61358, -81.71957],
+  O6284664: [28.5494, -81.7729]
+};
+
 window.PROPERTIES = [
   { mls: 'O6432344', category: 'locacao', status: 'Para locação', type: 'Imóvel residencial', address: '7270 Westpointe Blvd, unidade 910', location: 'Condado de Orange, Flórida', price: 2000, period: 'por mês', specs: ['3 quartos', '2 banheiros', '132,20 m² (1.423 sqft)', 'Piscina do condomínio', 'Construído em 1994'], images: localGallery('O6417361', 26) },
   { mls: 'O6431425', category: 'comercial', status: 'Locação comercial', type: 'Imóvel comercial', address: '7901 Kingspointe Pkwy', location: 'Condado de Orange, Flórida', price: 9325, period: 'por mês', specs: ['Construído em 2005'], images: gallery('O6431425', 16) },
@@ -48,4 +76,4 @@ window.PROPERTIES = [
   { mls: 'O6305521', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '4731 Clock Tower Dr, unidade 104', location: 'Condado de Osceola, Flórida', price: 275000, period: '', specs: ['2 quartos', '2 banheiros', '104,61 m² (1.126 sqft)', 'Piscina do condomínio', 'Construído em 2017'], images: localGallery('O6305521', 17) },
   { mls: 'O6291660', category: 'venda', status: 'À venda', type: 'Imóvel residencial', address: '2277 Crossbow St', location: 'Condado de Lake, Flórida', price: 625000, period: '', specs: ['5 quartos', '3 banheiros', '248,98 m² (2.680 sqft)', 'Garagem para 2 veículos', 'Construído em 2023'], images: localGallery('O6291660', 31) },
   { mls: 'O6284664', category: 'venda', status: 'Terreno à venda', type: 'Terreno', address: 'Lot 2 Mercado Ct', location: 'Condado de Lake, Flórida', price: 369000, period: '', specs: ['17.644 m² (4,36 acres)'], images: localGallery('O6284664', 14) }
-].map((property) => ({ ...property, image: property.images[0] || '' }));
+].map((property) => ({ ...property, image: property.images[0] || '', coords: COORDS[property.mls] || null }));
